@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page renders correctly 1`] = `
+<div>
+  <div
+    class="page"
+    role="main"
+  >
+    <div
+      class="container"
+    >
+      children
+    </div>
+  </div>
+</div>
+`;

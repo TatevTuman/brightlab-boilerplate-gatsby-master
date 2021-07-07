@@ -1,0 +1,39 @@
+// tsconfig.json
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "esnext",
+    "jsx": "preserve",
+    "lib": ["dom", "esnext"],
+    "strict": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": false,
+    "allowJs": true,
+    "baseUrl": ".",
+    "paths": {
+      /*
+        also check gatsby-node.js onCreateWebpackConfig aliases
+        and .storybook/main.js
+        and jest.config.ts with moduleNameMapper
+      */
+      "@components": ["src/components/index.tsx"],
+      "@elements": ["src/elements/index.tsx"],
+      "@layouts": ["src/templates/index.tsx"],
+      "@pages-components/*": ["src/pages-components/*"],
+      "@images/*": ["static/assets/images/*"],
+      "@svg": ["src/elements/Icons/index.tsx"],
+      "@styles": ["static/assets/styles"],
+      "@types": ["src/types/index.ts"],
+      "@graphql": ["src/graphql/index.ts"],
+      "@fragments": ["src/graphql/fragments/index.ts"],
+      "@utils": ["src/utils/index.ts"],
+      "@hooks": ["src/hooks/index.ts"],
+      "@hocs": ["src/hocs/index.ts"],
+      "@cache": ["gatsby-apollo-cache.ts"]
+    },
+    "typeRoots": ["./node_modules/@types", "./@types"]
+  },
+  "exclude": ["node_modules", "public", ".cache"]
+}
