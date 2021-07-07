@@ -1,4 +1,4 @@
-import { InMemoryCache, makeVar } from '@apollo/client'
+import { gql, InMemoryCache, makeVar } from '@apollo/client'
 import { CacheModal } from '@types'
 import possibleTypes from './gatsby-apollo-cache-types.json'
 
@@ -19,6 +19,13 @@ const cache = new InMemoryCache({
           read() {
             return overlayVar()
           }
+        }
+      }
+    },
+    GolfClubModel: {
+      fields: {
+        isCached(isCached, { cache }) {
+          return true
         }
       }
     }

@@ -16,6 +16,7 @@ const Header: React.FC<HeaderProps> = props => {
           description
           retailPrice
           avatar
+          isCached @client
           brand {
             name
           }
