@@ -38,7 +38,9 @@ const Header: React.FC<HeaderProps> = props => {
 
   return (
     <div>
+
       <div className={'header'}>
+        <div className={'w-full px-20 mx-auto mx-30 my-30 flex justify-center flex-wrap font-sans'} style={{ color: 'DarkCyan' }}> <h1>Putter list</h1></div>
         <div className={'w-full px-20 mx-auto mx-30 my-30 flex justify-center flex-wrap font-sans'}>
           {data.paginateGolfClubModels.content.map(item => {
             const { id, brand:{name}, retailPrice, avatar } = item
@@ -47,17 +49,19 @@ const Header: React.FC<HeaderProps> = props => {
               <div key={id} className={'w-1/5 shadow-gray rounded-15 mr-40 mb-40'}>
                 <img className={'rounded-t-15'} src={`https://hotcakegolf.brightlab.solutions${avatar}`} alt="" />
                 <div className={'pt-10 px-20 pb-20 bg-gray-100'}>
-                  <p className={'text-14'} style={{ color: 'gray' }}>
+                  <p className={'text-15'} style={{ color: 'DarkCyan' }}>
                     {name}
                   </p>
-                  <p className={'text-16'}>{name}</p>
                   <p className={'text-20 text-black'}>${retailPrice}</p>
                 </div>
               </div>
             )
           })}
         </div>
-        <Pagination current={page} totalPages={data.paginateGolfClubModels.pagination.pageSize} onClick={setPage} />
+        <div className={'w-full px-20 mx-auto mx-30 my-30 flex justify-center flex-wrap font-sans'}>
+          <Pagination current={page} totalPages={data.paginateGolfClubModels.pagination.pageSize} onClick={setPage} />
+        </div>
+
       </div>
     </div>
   )

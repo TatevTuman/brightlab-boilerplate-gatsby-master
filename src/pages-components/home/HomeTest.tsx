@@ -5,7 +5,7 @@ export interface HomeTestProps {}
 const HomeTest: React.FC<HomeTestProps> = props => {
   const {} = props
 
-  return <div>HomeTest</div>
+  return <div></div>
 }
 
 export default HomeTest

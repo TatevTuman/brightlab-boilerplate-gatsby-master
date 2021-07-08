@@ -10,7 +10,7 @@ const Footer: React.FC<FooterProps> = props => {
   return (
     <div className={'footer'} role="contentinfo">
       <Container>
-        <h2>Footer</h2>
+        <h2></h2>
       </Container>
     </div>
   )
