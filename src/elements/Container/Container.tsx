@@ -8,7 +8,7 @@ export interface ContainerProps {
 const Container: React.FC<ContainerProps> = props => {
   const { children } = props
 
-  return <div className={'container'}></div>
+  return <div className={'container'}>{children}</div>
 }
 
 export default memo(Container)
